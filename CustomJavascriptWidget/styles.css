@@ -1,0 +1,56 @@
+.root {
+}
+.widget {
+	width: 300px;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	background-color: #767676 !important;
+}
+
+.card {
+	background-color: white;
+	border: 2px solid #7676766b !important;
+	padding: 5px;
+	border-radius: 2%;
+	box-sizing: border-box;
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+}
+
+.card-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.widget-element {
+	flex-grow: 1;
+}
+
+.widget-element a {
+	text-decoration: none;
+}
+.domain-path {
+	padding: 0.2rem;
+	color: #767676 !important;
+	display: flex;
+	justify-content: space-between;
+}
+
+.title {
+	text-transform: capitalize;
+	font-weight: bold;
+	font-size: 18px;
+	font-weight: 700;
+	color: #002f36;
+	padding: 3px;
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+
+.domain {
+	text-transform: capitalize;
+}
