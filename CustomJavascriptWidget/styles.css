@@ -1,11 +1,19 @@
 .root {
+	height: 100%;
+	width: 100%;
 }
+
+@font-face {
+	font-family: Brookline;
+	src: url(./asset/brookline-font/BrooklineCondensed-nRL3M.ttf);
+}
+
 .widget {
 	width: 300px;
 	height: 600px;
 	display: flex;
 	flex-direction: column;
-	background-color: #767676 !important;
+	background-color: #7676766b !important;
 }
 
 .card {
@@ -19,6 +27,15 @@
 .header {
 	display: flex;
 	justify-content: center;
+	font-family: Helvetica;
+	font-weight: bold;
+}
+
+.line-clamp {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
 }
 
 .card-container {
@@ -27,16 +44,24 @@
 	display: flex;
 	flex-direction: column;
 }
-.widget-element {
+.widget-element-container {
 	flex-grow: 1;
 }
 
-.widget-element a {
+.widget-element-container a {
 	text-decoration: none;
 }
+
+.widget-elements {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 .domain-path {
 	padding: 0.2rem;
-	color: #767676 !important;
+	color: darkslategray !important;
 	display: flex;
 	justify-content: space-between;
 }
@@ -46,7 +71,7 @@
 	font-weight: bold;
 	font-size: 18px;
 	font-weight: 700;
-	color: #002f36;
+	color: black;
 	padding: 3px;
 	font-family: 'Trebuchet MS', Helvetica, sans-serif;
 }
