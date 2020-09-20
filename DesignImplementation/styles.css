@@ -1,0 +1,119 @@
+:root {
+	--main-radius: 5px;
+	--main-padding: 5px;
+}
+
+h1 {
+	margin: 0;
+	margin-top: 20px;
+}
+
+h2 {
+	margin: 0;
+	margin-top: 20px;
+}
+
+p {
+	margin: 0;
+	margin-top: 20px;
+}
+
+body {
+	margin: 0;
+}
+
+@font-face {
+	font-family: Imperial;
+	src: url(./asset/ImperialBT-Roman.otf);
+}
+.container {
+	display: grid;
+	height: 100vh;
+	/* grid-template-columns: 1fr 1fr 0.1fr; */
+	grid-template-columns: auto auto auto;
+	grid-template-rows: fit-content(400px) auto 0.1fr;
+	font-size: 12px;
+	font-family: Imperial;
+	font-size: 15px;
+	text-align: center;
+}
+
+.left {
+	max-width: 300px;
+	text-align: right;
+	grid-column: 1/2; /* Spans two columns */
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.middle {
+	grid-column: 2/3;
+	text-align: left;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.right {
+	grid-column: 3/4;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.linkTitle {
+	color: blue;
+}
+
+/* Not very sure if the position should be fixed or not, change position for preference */
+footer {
+	/* position: fixed; 
+    bottom: 0;
+	left: 0; */
+	background: black;
+	color: white;
+	grid-column: 1/-1;
+}
+
+#mediaPlatform {
+	display: flex;
+	flex-direction: column;
+}
+#mediaPlatform > i {
+	padding: 8px;
+	font-size: 20px;
+}
+
+@media only screen and (max-width: 550px) {
+	.container {
+		grid-template-columns: 1fr;
+		grid-gap: 0;
+	}
+	.left {
+		max-width: 100%;
+		text-align: left;
+		grid-column: 1/2; /* Spans two columns */
+		border-radius: var(--main-radius);
+		padding-top: var(--main-padding);
+	}
+
+	.middle {
+		grid-column: 1/2;
+		border-radius: var(--main-radius);
+		padding-top: var(--main-padding);
+		text-align: left;
+	}
+
+	.right {
+		grid-column: 1/2;
+		border-radius: var(--main-radius);
+		padding-top: var(--main-padding);
+	}
+
+	#mediaPlatform {
+		display: flex;
+		flex-direction: row;
+		grid-row: 2;
+	}
+	#subHeader {
+		grid-row: 3;
+	}
+}
