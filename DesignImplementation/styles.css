@@ -67,7 +67,8 @@ body {
 footer {
 	/* position: fixed; 
     bottom: 0;
-	left: 0; */
+    left: 0; */
+	margin-top: 20px;
 	background: black;
 	color: white;
 	grid-column: 1/-1;
